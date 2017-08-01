@@ -3,6 +3,10 @@ Example deploy k8s to vsphere
 
 ## Prerequisites
 
+Deploy the OVA template from the [kubernetes anywhere vsphere instructions](https://github.com/kubernetes/kubernetes-anywhere/blob/master/phase1/vsphere/README.md#upload-vm-image-to-be-used-to-vsphere).
+
+Dont turn it on. Convert it to a vcenter template without changing the name.
+
 - A docker installation (local or remote) that can see:- 
 	- the vcenter server; 
 	- the vlan where the kubernetes nodes will deploy.
