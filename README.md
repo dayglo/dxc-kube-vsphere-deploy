@@ -1,24 +1,27 @@
 Example deploy k8s to vsphere
 =============================
 
-You will need:-
+## Prerequisites
+
 - A docker installation (local or remote) that can see:- 
 	- the vcenter server; 
 	- the vlan where the kubernetes nodes will deploy.
-- 
+
 
 The VLAN you choose must have internet access and dhcp.
 
-The docker server can be deployed using [this script](https://gist.github.com/dayglo/fc48638d30218a5d420c69c7ac5b71dc)
+The docker server can be deployed using [this script](https://gist.github.com/dayglo/fc48638d30218a5d420c69c7ac5b71dc).
 
-The dhcp server can be deployed easily using [this docker image](https://hub.docker.com/r/joebiellik/dhcpd/) An example dhcp.conf is [here](https://gist.github.com/dayglo/d095922dda57a9ebe6b0018c404e6fca).
+The dhcp server can be deployed easily using [this docker image](https://hub.docker.com/r/joebiellik/dhcpd/). An example dhcp.conf is [here](https://gist.github.com/dayglo/d095922dda57a9ebe6b0018c404e6fca).
 
+
+## Deploy
 
 ```
 git clone https://github.com/dayglo/dxc-kube-vsphere-deploy.git
 cd dxc-kube-vsphere-deploy
 ```
 
-edit the .config file, replacing the vsphere details.
+Open and edit the ```.config``` file, replacing the vsphere details, credentials, cluster size and cluster name. If you use a DNS name for the vcenter in the config file, ensure you update the --dns lines in the start.sh script.
 
 run ```./start.sh```, then in the kubernetes-anywhere container terminal session, type ```make deploy``` 
