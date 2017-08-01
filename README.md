@@ -7,9 +7,11 @@ You will need:-
 	- the vlan where the kubernetes nodes will deploy.
 - 
 
-The VLAN you chose must have internet access and dhcp.
+The VLAN you choose must have internet access and dhcp.
 
-The docker server can be deployed easily using [this docker image](https://hub.docker.com/r/joebiellik/dhcpd/) An example dhcp.conf is [here](https://gist.github.com/dayglo/d095922dda57a9ebe6b0018c404e6fca).
+The docker server can be deployed using [this script](https://gist.github.com/dayglo/fc48638d30218a5d420c69c7ac5b71dc)
+
+The dhcp server can be deployed easily using [this docker image](https://hub.docker.com/r/joebiellik/dhcpd/) An example dhcp.conf is [here](https://gist.github.com/dayglo/d095922dda57a9ebe6b0018c404e6fca).
 
 
 ```
