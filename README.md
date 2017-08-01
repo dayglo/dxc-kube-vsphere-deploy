@@ -28,4 +28,11 @@ cd dxc-kube-vsphere-deploy
 
 Open and edit the ```.config``` file, replacing the vsphere details, credentials, cluster size and cluster name. If you use a DNS name for the vcenter in the config file, ensure you update the --dns lines in the start.sh script.
 
-run ```./start.sh```, then in the kubernetes-anywhere container terminal session, type ```make deploy``` 
+run ```./start.sh```, then in the kubernetes-anywhere container terminal session, type ```make deploy```.
+
+Dont exit the container before saving the kubeconfig (which includes the certificate we need to log on). I'll automate this bit next.
+
+
+## Destroy
+
+in the kubernetes-anywhere container terminal session, type ```make destroy-cluster``` 
